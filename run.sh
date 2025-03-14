@@ -15,7 +15,7 @@ else
     cd Lidl-scraper-telegram
 fi
 # Create .env file with bot token and database name
-echo "BOT_TOKEN=$BOT_TOKEN" > .env
+echo "TOKEN=$BOT_TOKEN" > .env
 
 # Remove incorrect dotenv dependency
 sed -i '/dotenv==0.21.0/d' requirements.txt
