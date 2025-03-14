@@ -28,5 +28,5 @@ pip3 install python-dotenv
 export $(grep -v '^#' /usr/src/app/.env | xargs)
 
 # Run the script
-DATABASE_PATH="/data/lidl_scraper.db"
+DATABASE_PATH="/config/lidl_scraper.db"
 python3 bot.py --db-path "$DATABASE_PATH"
