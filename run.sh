@@ -29,4 +29,4 @@ export $(grep -v '^#' /usr/src/app/.env | xargs)
 
 # Run the script
 DATABASE_PATH="/config/lidl_scraper.db"
-python3 bot.py --db-path "$DATABASE_PATH"
+python3 bot.py --db-path "$DATABASE_PATH" --bot-token "$BOT_TOKEN"
