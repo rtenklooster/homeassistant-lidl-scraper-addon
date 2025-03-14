@@ -17,6 +17,7 @@ fi
 
 # Install Python dependencies
 pip3 install -r requirements.txt
+pip3 install python-dotenv
 
 # Run the script
-python3 main.py
+python3 src/main.py

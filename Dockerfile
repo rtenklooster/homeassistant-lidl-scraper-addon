@@ -1,7 +1,7 @@
 FROM alpine:3.13
 
 # Install dependencies
-RUN apk add --no-cache python3 py3-pip git
+RUN apk add --no-cache python3 py3-pip git jq
 
 # Set working directory
 WORKDIR /usr/src/app
