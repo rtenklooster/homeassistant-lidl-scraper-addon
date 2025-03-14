@@ -3,6 +3,9 @@
 # Load bot token and database name from options
 BOT_TOKEN=$(jq --raw-output '.bot_token' /data/options.json)
 
+# Debugging: Print the first 4 characters of the bot token
+echo "Bot token starts with: ${BOT_TOKEN:0:4}"
+
 # Clone or update the repository
 if [ -d "/usr/src/app/Lidl-scraper-telegram" ]; then
     cd /usr/src/app/Lidl-scraper-telegram
@@ -12,7 +15,7 @@ else
     cd Lidl-scraper-telegram
 fi
 # Create .env file with bot token and database name
-echo "BOT_TOKEN=$BOT_TOKEN" > /usr/src/app/Lidl-scraper-telegram/.env
+echo "BOT_TOKEN=$BOT_TOKEN" > .env
 
 # Remove incorrect dotenv dependency
 sed -i '/dotenv==0.21.0/d' requirements.txt
