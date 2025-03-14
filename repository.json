@@ -1,0 +1,13 @@
+{
+  "name": "Home Assistant Lidl Scraper Add-on Repository",
+  "url": "https://github.com/rtenklooster/homeassistant-lidl-scraper-addon",
+  "maintainer": "rtenklooster",
+  "addons": [
+    {
+      "name": "Lidl Scraper Telegram",
+      "slug": "lidl_scraper_telegram",
+      "description": "An add-on to run the Lidl Scraper Telegram script.",
+      "url": "https://github.com/rtenklooster/homeassistant-lidl-scraper-addon"
+    }
+  ]
+}
