@@ -11,9 +11,11 @@
   "homeassistant_api": false,
   "host_network": true,
   "options": {
-    "bot_token": "YOUR_BOT_TOKEN"
+    "bot_token": "YOUR_BOT_TOKEN",
+    "database_name": "lidl_scraper.db"
   },
   "schema": {
-    "bot_token": "str"
+    "bot_token": "str",
+    "database_name": "str"
   }
 }

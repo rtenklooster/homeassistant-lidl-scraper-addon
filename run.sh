@@ -1,10 +1,12 @@
 #!/bin/sh
 
-# Load bot token from options
+# Load bot token and database name from options
 BOT_TOKEN=$(jq --raw-output '.bot_token' /data/options.json)
+DATABASE_NAME=$(jq --raw-output '.database_name' /data/options.json)
 
-# Create .env file with bot token
+# Create .env file with bot token and database name
 echo "BOT_TOKEN=$BOT_TOKEN" > /usr/src/app/.env
+echo "DATABASE_NAME=$DATABASE_NAME" >> /usr/src/app/.env
 
 # Clone or update the repository
 if [ -d "/usr/src/app/Lidl-scraper-telegram" ]; then
@@ -23,4 +25,5 @@ pip3 install -r requirements.txt
 pip3 install python-dotenv
 
 # Run the script
-python3 bot.py
+DATABASE_PATH="/data/lidl_scraper.db"
+python3 bot.py --db-path "$DATABASE_PATH"
