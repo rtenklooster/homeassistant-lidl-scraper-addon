@@ -2,7 +2,7 @@
 
 # Load bot token and database name from options
 BOT_TOKEN=$(jq --raw-output '.bot_token' /data/options.json)
-DATABASE_NAME=$(jq --raw-output '.database_name' /data/options.json)
+#DATABASE_NAME=$(jq --raw-output '.database_name' /data/options.json)
 
 # Create .env file with bot token and database name
 echo "BOT_TOKEN=$BOT_TOKEN" > /usr/src/app/.env
@@ -28,5 +28,5 @@ pip3 install python-dotenv
 export $(grep -v '^#' /usr/src/app/.env | xargs)
 
 # Run the script
-DATABASE_PATH="/data/lidl_scraper.db"
+DATABASE_PATH="/config/lidl_scraper.db"
 python3 bot.py --db-path "$DATABASE_PATH"
