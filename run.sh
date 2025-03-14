@@ -15,9 +15,12 @@ else
     cd Lidl-scraper-telegram
 fi
 
+# Remove incorrect dotenv dependency
+sed -i '/dotenv==0.21.0/d' requirements.txt
+
 # Install Python dependencies
 pip3 install -r requirements.txt
 pip3 install python-dotenv
 
 # Run the script
-python3 src/main.py
+python3 main.py
