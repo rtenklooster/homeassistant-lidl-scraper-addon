@@ -1,0 +1,19 @@
+{
+  "name": "Lidl Scraper Telegram",
+  "version": "1.0",
+  "slug": "lidl_scraper_telegram",
+  "description": "An add-on to run the Lidl Scraper Telegram script.",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "application",
+  "boot": "auto",
+  "hassio_api": true,
+  "hassio_role": "default",
+  "homeassistant_api": false,
+  "host_network": true,
+  "options": {
+    "bot_token": "YOUR_BOT_TOKEN"
+  },
+  "schema": {
+    "bot_token": "str"
+  }
+}
